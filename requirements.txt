@@ -1,0 +1,3 @@
+flask
+pdf2docx
+gunicorn

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link href="https://obsproject.com/assets/css/blurple.min.css?20200317-1" rel="stylesheet">
+	<title>File Upload </title>
+</head>
+<body>
+<div class="bodor">
+	<div class="file__upload">
+		<div class="header">
+			<p><i class="fa fa-cloud-upload fa-2x"></i><span><span>up</span>load</span></p>			
+		</div>
+		<form class="body" method="post" action="/upload" enctype="multipart/form-data" onsubmit="return sss()" >
+			<input name="filepdf" type="file" id="upload" accept=".pdf" >
+			<label for="upload">
+				<i class="fa fa-file-text-o fa-3x"></i>
+				<p>
+					<strong>Drag and drop</strong> files here<br>
+					or <span>browse</span> to begin the upload
+				</p>
+			</label>
+			<img id="lo" width="80" src="static/images/Loading.gif">
+				<div class="container-name"> <input id="ss" class="example_e" type="submit" value="upload" ></div></div>
+		</form>
+	</div>
+</div>
+<script>
+document.getElementById("lo").style.display ="none";
+const input =document.getElementById("ss")
+function sss(){
+	input.remove();
+	document.getElementById("lo").style.display ="block";
+	
+}
+
+
+</script>
+
+
+<!--for force refresh when click back button source https://stackoverflow.com/questions/43043113/how-to-force-reloading-a-page-when-using-browser-back-button -->
+	<script>
+		window.addEventListener( "pageshow", function ( event ) {
+			var historyTraversal = event.persisted || 
+								   ( typeof window.performance != "undefined" && 
+										window.performance.navigation.type === 2 );
+			if ( historyTraversal ) {
+			  // Handle page restore.
+			  window.location.reload();
+			}
+		  });
+	</script>
+	
+	<!--################################### -->
+<div>
+<footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <!--<div class="logo"><img src="/assets/images/new_icon_small-r.png"></div>-->
+          <div class="footer_title">Upload Project</div>
+        </div>
+        <div class="footer_row footer_social">
+    
+          <a href="https://github.com/kira-xc" target="_blank" aria-label="GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">Upload Project</div>
+          <a href="#" aria-label="Download">Download</a>
+          <a href="#" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Groups</div>
+          <a href="https://github.com/kira-xc" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="#" aria-label="Discord">Discord</a>
+         <!-- <a href="#" aria-label="OBS on Patreon">Patreon</a>-->
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="#" aria-label="Help Portal">Help Portal</a>
+          <a href="#" aria-label="Forums">Forums</a>
+          <a href="#" aria-label="Official Discord">Discord</a>
+          <a href="#" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2022. Upload Project are created and Development by <a href="https://github.com/kira-xc">kira-xc</a>.<br>
+Website designed and created by <a href="https://github.com/kira-xc">kira-xc</a>.</p>    </div>
+    <br>
+</div>
+</body>
+</html>
